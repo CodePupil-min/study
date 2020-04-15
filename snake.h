@@ -4,7 +4,6 @@
 #include<conio.h>
 #include<time.h>
 #include<windows.h>
-#include<thread>
 using namespace std;
 
 #define face_x 90
@@ -16,13 +15,13 @@ using namespace std;
 #define space 32
 #define enter 13
 #define Esc 27
-#define ss 200//Ñ¡ÔñÄ£Ê½ºÍÄÑ¶ÈÊ±ÉÁË¸Ê±¼ä
+#define ss 200//é€‰æ‹©æ¨¡å¼å’Œéš¾åº¦æ—¶é—ªçƒæ—¶é—´
 
 
 
-void set_color(int x=0);//ÉèÖÃ×Ö·ûÑÕÉ«
-void gotoxy(int x, int y);//ÉèÖÃ¹â±êÎ»ÖÃ
-void Hide_Cursor();   //Òş²Ø¹â±ê
+void set_color(int x=0);//è®¾ç½®å­—ç¬¦é¢œè‰²
+void gotoxy(int x, int y);//è®¾ç½®å…‰æ ‡ä½ç½®
+void Hide_Cursor();   //éšè—å…‰æ ‡
 void Look_Cursor();
 
 
@@ -30,9 +29,9 @@ void Look_Cursor();
 class Map
 {
 public:
-	void paint();//»­³ö³õÊ¼µØÍ¼ºÍÌáÊ¾
-	void update_grade();//Ë¢ĞÂ·ÖÊı
-	void initdie();//ËÀÍö½çÃæ
+	void paint();//ç”»å‡ºåˆå§‹åœ°å›¾å’Œæç¤º
+	void update_grade();//åˆ·æ–°åˆ†æ•°
+	void initdie();//æ­»äº¡ç•Œé¢
 private:
 	int number;
 	int m[face_x][face_y+1];
@@ -46,41 +45,41 @@ struct S {
 class Snake
 {
 public:
-	void initSnake();//³õÊ¼»¯Éß
-	void move(int key);//ÉßÒÆ¶¯
-	void add_snake();//¼ÓÒ»½ÚÉßÎ²
-	bool is_die();//ËÀÁË·µ»Ø1£¬Ã»ËÀ·µ»Ø0
-	void print(); //»­Éß
-	S* head;//Í·½Úµã
+	void initSnake();//åˆå§‹åŒ–è›‡
+	void move(int key);//è›‡ç§»åŠ¨
+	void add_snake();//åŠ ä¸€èŠ‚è›‡å°¾
+	bool is_die();//æ­»äº†è¿”å›1ï¼Œæ²¡æ­»è¿”å›0
+	void print(); //ç”»è›‡
+	S* head;//å¤´èŠ‚ç‚¹
 private:
-	S* last;//Î²
+	S* last;//å°¾
 	int size;
-	int a[2];//±£´æÒÆ¶¯Ê±±»É¾µÄ×îºóÒ»¸ö½Úµã×ø±ê£¬ÓÃÒÔ¼Ó³¤¶ÈÊ±
+	int a[2];//ä¿å­˜ç§»åŠ¨æ—¶è¢«åˆ çš„æœ€åä¸€ä¸ªèŠ‚ç‚¹åæ ‡ï¼Œç”¨ä»¥åŠ é•¿åº¦æ—¶
 };
 class Food 
 {
 public:
-	void setFood(S *&head);//·ÅÊ³Îï
-	bool isEat(S*& head);//³Ôµ½·µ»Ø1£¬Ã»³Ôµ½·µ»Ø0
+	void setFood(S *&head);//æ”¾é£Ÿç‰©
+	bool isEat(S*& head);//åƒåˆ°è¿”å›1ï¼Œæ²¡åƒåˆ°è¿”å›0
 private:
 	int x;
-	int y;//Ê³Îï×ø±ê
+	int y;//é£Ÿç‰©åæ ‡
 	int color;
 };
 
 class Game
 {
 public:
-	int button();//ÅĞ¶Ï°´¼ü£¬´¦ÀíÏàã£ÊÂ¼ş£¬ÒÔ¼°ÔİÍ£ÍË³ö
-	void welcome();//¿ªÊ¼½çÃæ
-	void set_degree();//ÉèÖÃÄÑ¶È£¬Ò×0£¬ÖĞ1£¬ÄÑ2
+	int button();//åˆ¤æ–­æŒ‰é”®ï¼Œå¤„ç†ç›¸æ‚–äº‹ä»¶ï¼Œä»¥åŠæš‚åœé€€å‡º
+	void welcome();//å¼€å§‹ç•Œé¢
+	void set_degree();//è®¾ç½®éš¾åº¦ï¼Œæ˜“0ï¼Œä¸­1ï¼Œéš¾2
 	void choose_degree();
-	void set_ms();//Ä£Ê½£¬´«Í³0£¬ÎŞÇ½1£¬ÎŞ¾¡2
-	void choose_ms();//Ñ¡ÔñÄ£Ê½
-	static int degree;//ÄÑ¶È
-	int ndtime;//²»Í¬ÄÑ¶È¶ÔÓ¦µÄÊ±¼ä
-	static int ms;//Ä£Ê½
-	int key;//°´¼ü
+	void set_ms();//æ¨¡å¼ï¼Œä¼ ç»Ÿ0ï¼Œæ— å¢™1ï¼Œæ— å°½2
+	void choose_ms();//é€‰æ‹©æ¨¡å¼
+	static int degree;//éš¾åº¦
+	int ndtime;//ä¸åŒéš¾åº¦å¯¹åº”çš„æ—¶é—´
+	static int ms;//æ¨¡å¼
+	int key;//æŒ‰é”®
 };
 
 void game(Map& map, Snake& snake, Food& food, Game& g);
