@@ -1,0 +1,66 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: VCProjectVC6 - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\Users\xiao\AppData\Local\Temp\RSPC1C1.tmp" with contents
+[
+/nologo /MLd /W3 /Gm /GX /ZI /Od /I "../../Header" /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_MBCS" /FR"Debug/" /Fp"Debug/VCProjectVC6.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"C:\Users\xiao\Desktop\TestB v6.4\SourceCode\Src\LessonX.cpp"
+]
+Creating command line "cl.exe @C:\Users\xiao\AppData\Local\Temp\RSPC1C1.tmp" 
+Creating temporary file "C:\Users\xiao\AppData\Local\Temp\RSPC1C2.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib Winmm.lib ..\..\Src\CommonAPI_VC6.Lib /nologo /subsystem:windows /incremental:no /pdb:"Debug/Game.pdb" /debug /machine:I386 /out:"..\..\..\Bin\Game.exe" /pdbtype:sept 
+".\Debug\LessonX.obj"
+".\Debug\list.obj"
+".\Debug\Main.obj"
+".\Debug\VCTemplate.res"
+]
+Creating command line "link.exe @C:\Users\xiao\AppData\Local\Temp\RSPC1C2.tmp"
+<h3>Output Window</h3>
+Compiling...
+LessonX.cpp
+C:\Users\xiao\Desktop\TestB v6.4\SourceCode\Src\LessonX.cpp(110) : warning C4244: 'initializing' : conversion from 'double' to 'const float', possible loss of data
+C:\Users\xiao\Desktop\TestB v6.4\SourceCode\Src\LessonX.cpp(111) : warning C4244: 'initializing' : conversion from 'double' to 'const float', possible loss of data
+C:\Users\xiao\Desktop\TestB v6.4\SourceCode\Src\LessonX.cpp(203) : warning C4244: 'argument' : conversion from 'double' to 'const float', possible loss of data
+C:\Users\xiao\Desktop\TestB v6.4\SourceCode\Src\LessonX.cpp(203) : warning C4244: 'argument' : conversion from 'double' to 'const float', possible loss of data
+C:\Users\xiao\Desktop\TestB v6.4\SourceCode\Src\LessonX.cpp(203) : warning C4244: 'argument' : conversion from 'double' to 'const float', possible loss of data
+C:\Users\xiao\Desktop\TestB v6.4\SourceCode\Src\LessonX.cpp(203) : warning C4244: 'argument' : conversion from 'double' to 'const float', possible loss of data
+C:\Users\xiao\Desktop\TestB v6.4\SourceCode\Src\LessonX.cpp(493) : warning C4244: 'argument' : conversion from 'int' to 'const float', possible loss of data
+C:\Users\xiao\Desktop\TestB v6.4\SourceCode\Src\LessonX.cpp(548) : warning C4244: 'initializing' : conversion from 'int' to 'float', possible loss of data
+C:\Users\xiao\Desktop\TestB v6.4\SourceCode\Src\LessonX.cpp(551) : warning C4244: 'initializing' : conversion from 'int' to 'float', possible loss of data
+C:\Users\xiao\Desktop\TestB v6.4\SourceCode\Src\LessonX.cpp(561) : warning C4244: 'argument' : conversion from 'double' to 'const float', possible loss of data
+C:\Users\xiao\Desktop\TestB v6.4\SourceCode\Src\LessonX.cpp(561) : warning C4244: 'argument' : conversion from 'double' to 'const float', possible loss of data
+C:\Users\xiao\Desktop\TestB v6.4\SourceCode\Src\LessonX.cpp(573) : warning C4244: 'argument' : conversion from 'double' to 'const float', possible loss of data
+C:\Users\xiao\Desktop\TestB v6.4\SourceCode\Src\LessonX.cpp(573) : warning C4244: 'argument' : conversion from 'double' to 'const float', possible loss of data
+C:\Users\xiao\Desktop\TestB v6.4\SourceCode\Src\LessonX.cpp(597) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+C:\Users\xiao\Desktop\TestB v6.4\SourceCode\Src\LessonX.cpp(614) : warning C4244: 'argument' : conversion from 'int' to 'const float', possible loss of data
+C:\Users\xiao\Desktop\TestB v6.4\SourceCode\Src\LessonX.cpp(589) : warning C4101: 'fSpeedX' : unreferenced local variable
+C:\Users\xiao\Desktop\TestB v6.4\SourceCode\Src\LessonX.cpp(589) : warning C4101: 'fSpeedY' : unreferenced local variable
+C:\Users\xiao\Desktop\TestB v6.4\SourceCode\Src\LessonX.cpp(811) : warning C4244: 'initializing' : conversion from 'float' to 'int', possible loss of data
+C:\Users\xiao\Desktop\TestB v6.4\SourceCode\Src\LessonX.cpp(812) : warning C4244: 'initializing' : conversion from 'float' to 'int', possible loss of data
+C:\Users\xiao\Desktop\TestB v6.4\SourceCode\Src\LessonX.cpp(836) : warning C4244: 'initializing' : conversion from 'float' to 'int', possible loss of data
+C:\Users\xiao\Desktop\TestB v6.4\SourceCode\Src\LessonX.cpp(837) : warning C4244: 'initializing' : conversion from 'float' to 'int', possible loss of data
+C:\Users\xiao\Desktop\TestB v6.4\SourceCode\Src\LessonX.cpp(770) : warning C4101: 'fSpeedX' : unreferenced local variable
+C:\Users\xiao\Desktop\TestB v6.4\SourceCode\Src\LessonX.cpp(770) : warning C4101: 'fSpeedY' : unreferenced local variable
+C:\Users\xiao\Desktop\TestB v6.4\SourceCode\Src\LessonX.cpp(1108) : warning C4244: 'argument' : conversion from 'float' to 'const int', possible loss of data
+C:\Users\xiao\Desktop\TestB v6.4\SourceCode\Src\LessonX.cpp(1237) : warning C4244: 'argument' : conversion from 'int' to 'const float', possible loss of data
+C:\Users\xiao\Desktop\TestB v6.4\SourceCode\Src\LessonX.cpp(854) : warning C4700: local variable 'iDir' used without having been initialized
+Linking...
+LINK : warning LNK4075: ignoring /EDITANDCONTINUE due to /INCREMENTAL:NO specification
+LINK : warning LNK4098: defaultlib "LIBC" conflicts with use of other libs; use /NODEFAULTLIB:library
+Creating command line "bscmake.exe /nologo /o"Debug/VCProjectVC6.bsc"  ".\Debug\LessonX.sbr" ".\Debug\list.sbr" ".\Debug\Main.sbr""
+Creating browse info file...
+<h3>Output Window</h3>
+
+
+
+<h3>Results</h3>
+Game.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>
